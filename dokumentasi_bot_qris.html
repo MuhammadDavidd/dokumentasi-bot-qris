@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Bot QRIS - Totoro Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background: #f5f5f5; }
+        h1, h2, h3 { color: #2c3e50; }
+        .container { max-width: 960px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
+        ul { margin-top: 0; }
+        .highlight { background: #ecf0f1; padding: 10px; border-radius: 8px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Dokumentasi Bot QRIS Totoro Store</h1>
+        <p><strong>Pengembang:</strong> Muhammad David Aryanto<br>
+           <strong>Gateway:</strong> ORDERKOUTA<br>
+           <strong>Bot Discord:</strong> Otomatisasi sistem pembayaran via QRIS</p>
+        
+        <h2>🔧 Fitur Utama</h2>
+        <ul>
+            <li><code>/bayar</code> - Membuat QRIS pembayaran otomatis</li>
+            <li><code>/statistik</code> - Menampilkan statistik transaksi (total, berhasil, pendapatan, hari ini)</li>
+            <li><code>/cetak-bukti</code> - Cetak bukti pembayaran dalam bentuk gambar</li>
+            <li><code>/buat-laporan</code> - Menghasilkan laporan transaksi bulanan dalam format Excel (khusus Owner)</li>
+            <li><code>/uptime</code> - Menampilkan status uptime bot</li>
+            <li><code>/info</code> - Menampilkan informasi tentang bot dan perintahnya</li>
+            <li><code>/set-info</code> - Menentukan channel untuk notifikasi transaksi (khusus Owner)</li>
+            <li><code>/set-nota</code> - Menentukan channel untuk nota otomatis (khusus Owner)</li>
+        </ul>
+
+        <h2>📤 Notifikasi Otomatis</h2>
+        <ul>
+            <li>Transaksi baru akan dikirim ke channel <code>info</code></li>
+            <li>Transaksi berhasil akan dikirim ke channel <code>info</code></li>
+            <li>Nota pembayaran otomatis dikirim ke channel <code>nota</code></li>
+        </ul>
+
+        <h2>📄 File & Struktur Data</h2>
+        <ul>
+            <li><code>qris_data.json</code> - Menyimpan semua data transaksi</li>
+            <li><code>channels_config.json</code> - Menyimpan pengaturan channel info/nota</li>
+            <li><code>qr_images/</code> - Folder menyimpan QR code</li>
+            <li><code>reports/</code> - Folder menyimpan laporan Excel</li>
+        </ul>
+
+        <h2>🛠️ Teknologi</h2>
+        <ul>
+            <li><strong>discord.js</strong> - Untuk interaksi bot Discord</li>
+            <li><strong>qris-payment</strong> - API untuk generate & cek QRIS</li>
+            <li><strong>canvas</strong> - Untuk membuat bukti pembayaran sebagai gambar</li>
+            <li><strong>exceljs</strong> - Untuk membuat laporan transaksi Excel</li>
+        </ul>
+
+        <h2>📌 Catatan</h2>
+        <div class="highlight">
+            <p>Bot ini akan otomatis memantau status pembayaran hingga 10 menit. Jika pembayaran diterima, akan langsung memproses transaksi dan mengirimkan bukti pembayaran ke user dan channel yang ditentukan.</p>
+        </div>
+    </div>
+</body>
+</html>
